@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keenan Hate Club Counter</title>
+</head>
+<body>
+    <h1>Keenan Hate Club Counter</h1>
+    <p id="counter">Loading...</p>
+
+    <script>
+        // Fetch content from Google Apps Script
+        fetch('https://script.google.com/macros/s/AKfycbzJSzdIhiukmu3tK0wVJXEicvg3-igxcP9m_O7JYN5gSYw2a4tULMB0MQ5Yx7Q00D4r/exec')
+            .then(response => response.text())
+            .then(content => {
+                // Display the content in the 'counter' element
+                document.getElementById('counter').innerText = 'Number of Haters: ' + content;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
