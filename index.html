@@ -16,7 +16,7 @@
         }
 
         // Fetch content from Google Apps Script
-fetch('https://script.google.com/macros/s/AKfycbwkKIW1Yia2450hXmqp_rslHjlrIXnoFlxrrE0OJ91YA3XryKhlR9OYKYKIz_vEItKB/exec')
+fetch('https://script.google.com/macros/s/AKfycbzaYpJzbA0yav4wF-XmqdqFNvtpR5SmAXbcQR78z-Bh2eoljeNineTHDpMoMqjjKCVy/exec')
     .then(response => response.text())
     .then(content => {
         document.getElementById('counter').innerText = 'Number of Haters: ' + content;
