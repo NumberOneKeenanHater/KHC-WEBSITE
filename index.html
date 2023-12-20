@@ -16,9 +16,12 @@
         }
 
         // Fetch content from Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbx4RnqTCUUzNRjQ8Yv5lPB4OiCAjDvoLmGtcj9NvxIyy_3H6kl5Tr8466FiaDg1VV5d/exec?callback=updateCounter')
-            .then(response => response.json())
-            .catch(error => console.error('Error fetching data:', error));
+fetch('https://script.google.com/macros/s/AKfycbyBzQzmbT02R6jdTsDroW5-LJ_w_qAc3QNG1WAbXDY9WcuZbtc6bFGUPQlt_4X6xW8l/exec')
+    .then(response => response.text())
+    .then(content => {
+        document.getElementById('counter').innerText = 'Number of Haters: ' + content;
+    })
+    .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 </html>
