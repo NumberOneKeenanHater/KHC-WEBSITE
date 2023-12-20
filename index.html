@@ -19,7 +19,7 @@
 fetch('https://script.google.com/macros/s/AKfycbzaYpJzbA0yav4wF-XmqdqFNvtpR5SmAXbcQR78z-Bh2eoljeNineTHDpMoMqjjKCVy/exec')
     .then(response => response.text())
     .then(content => {
-        document.getElementById('counter').innerText = 'Number of Haters: ' + content;
+        document.getElementById('counter').innerText = content;
     })
     .catch(error => console.error('Error fetching data:', error));
     </script>
