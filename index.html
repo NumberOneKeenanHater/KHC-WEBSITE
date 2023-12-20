@@ -17,7 +17,14 @@
 
         // Fetch content from Google Apps Script
         fetch('https://script.google.com/macros/s/AKfycbzeJh_MW_e6etCC_8c-YvASpDbux27Hthsq1NwnicgaWxjV9_AK49l5QdNFhbN7ZYpQ/exec')
-            .then(response => response.json()) // Parse the JSON response
+            .then(data => {
+    if (data && data.value !== undefined) {
+        updateCounter(data.value);
+    } else {
+        console.error('Invalid or missing data:', data);
+    }
+})
+
             .then(data => {
                 if (data && data.value !== undefined) {
                     updateCounter(data.value);
