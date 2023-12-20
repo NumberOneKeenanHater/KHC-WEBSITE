@@ -12,13 +12,12 @@
 
     <script>
         // Fetch content from Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbzJSzdIhiukmu3tK0wVJXEicvg3-igxcP9m_O7JYN5gSYw2a4tULMB0MQ5Yx7Q00D4r/exec')
-            .then(response => response.text())
-            .then(content => {
-                // Display the content in the 'counter' element
-                document.getElementById('counter').innerText = 'Number of Haters: ' + content;
-            })
-            .catch(error => console.error('Error fetching data:', error));
+        fetch('https://script.google.com/macros/s/AKfycbx4RnqTCUUzNRjQ8Yv5lPB4OiCAjDvoLmGtcj9NvxIyy_3H6kl5Tr8466FiaDg1VV5d/exec')
+    .then(response => response.text())
+    .then(content => {
+        document.getElementById('counter').innerText = 'Number of Haters: ' + content;
+    })
+    .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 </html>
